@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+        <title>Hipotenusa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+     
+       
+       <script>
+    function validar() {
+    
+        let a = document.getElementById("base1").value;
+        let b= document.getElementById("base2").value;
+
+        if(a == "" || b== ""){
+        alert("Por favor llenar los campos vacios");
+        }else
+
+        {
+        if(!/^([0-9])*$/.test(a) || !/^([0-9])*$/.test(b)){
+        alert("No se aceptan letras, por favor ingrese un valor numerico");
+        }
+
+        else{
+        document.getElementById("Enviar").submit();
+        }
+     }
+}
+</script>
+     
+       </head>
+     
+        <body bgcolor="#FDF5E6">
+
+        <h2>HIPOTENUSA</h2>
+        
+        <a href="Hipotenusa" >Ir al resultado</a>
+        <form id="Enviar" action="Hipotenusa" method="get">
+        <p><b>Escribe cateto A</b></p> <input type="text" name="base1" Id="base1"><br>
+        <p><b>Escribe cateto B</b></p> <input type="text" name="base2" Id="base2"><br>
+         <br><input type="button" onclick="validar()" value="Enviar">
+        </form>
+        
+    </body>
+    </html>
